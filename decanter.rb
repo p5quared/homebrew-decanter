@@ -5,20 +5,21 @@
 class Decanter < Formula
   desc "Decan't you see why it would be awesome to submit homework from the command line?"
   homepage "https://github.com/p5quared/decanter"
-  version "0.2.4"
+  version "0.2.5"
+  license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/p5quared/decanter/releases/download/v0.2.4/decanter_Darwin_arm64.tar.gz"
-      sha256 "d11f695439a08e9a48611d9a9558120a5c4fa2d91cb69a0f1976632b403598e9"
+      url "https://github.com/p5quared/decanter/releases/download/v0.2.5/decanter_Darwin_arm64.tar.gz"
+      sha256 "9e7bc2c88930ff1941cb9f34bebf96bd7c8dbaf5010996b04c8d9f99e7b42a3d"
 
       def install
         bin.install "decanter"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/p5quared/decanter/releases/download/v0.2.4/decanter_Darwin_x86_64.tar.gz"
-      sha256 "3456eb0985886f6551cd18bc0e76ea98f762b80006c34b5129fc9c8cc082bd9d"
+      url "https://github.com/p5quared/decanter/releases/download/v0.2.5/decanter_Darwin_x86_64.tar.gz"
+      sha256 "69168372ecf35179b93015b8a0ce13b0442b360b8b8cfbe3c7a8ad7c8e7e8ad6"
 
       def install
         bin.install "decanter"
@@ -28,16 +29,16 @@ class Decanter < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/p5quared/decanter/releases/download/v0.2.4/decanter_Linux_arm64.tar.gz"
-      sha256 "87842563837196d78f022881d5fee7473f4f24175a6483cef950dc9d0d84b3fa"
+      url "https://github.com/p5quared/decanter/releases/download/v0.2.5/decanter_Linux_arm64.tar.gz"
+      sha256 "2150cda6a8efc23d204629c9ebf7050c2917c65ccd50178ce757b69c0c6a17d7"
 
       def install
         bin.install "decanter"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/p5quared/decanter/releases/download/v0.2.4/decanter_Linux_x86_64.tar.gz"
-      sha256 "43e5842e79f0bfc1b576f40c79ddade2cd70473c5dea19aaa004621f64a2adce"
+      url "https://github.com/p5quared/decanter/releases/download/v0.2.5/decanter_Linux_x86_64.tar.gz"
+      sha256 "e1be7e3203643ee904383d5e3ac9e992eb0a655732918d3ffe2b613318b8f289"
 
       def install
         bin.install "decanter"
