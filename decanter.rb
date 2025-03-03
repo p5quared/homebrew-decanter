@@ -5,21 +5,21 @@
 class Decanter < Formula
   desc "Autolab from the CLI; Decan't you see why that's awesome?"
   homepage "https://github.com/p5quared/decanter"
-  version "0.5.0"
+  version "0.6.0"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/p5quared/decanter/releases/download/v0.5.0/decanter_Darwin_x86_64.tar.gz"
-      sha256 "bf8fbd136b9ac163f05a0683f824914bf46d78059effa57a540c694f9de95006"
+    if Hardware::CPU.intel?
+      url "https://github.com/p5quared/decanter/releases/download/v0.6.0/decanter_Darwin_x86_64.tar.gz"
+      sha256 "cc0b73e8a0aaec0929b76991a90f570493d1cbb813941677f7ea17acc40ebc66"
 
       def install
         bin.install "decanter"
       end
     end
-    on_arm do
-      url "https://github.com/p5quared/decanter/releases/download/v0.5.0/decanter_Darwin_arm64.tar.gz"
-      sha256 "ebf5f9b29565b82d8c509893ee2671e033719fe833941e707988a07ad68398b7"
+    if Hardware::CPU.arm?
+      url "https://github.com/p5quared/decanter/releases/download/v0.6.0/decanter_Darwin_arm64.tar.gz"
+      sha256 "ee20bfd0e9a9595f70c90802c7bf8a54933a7ccf00a8dc7c045b70fe38749c41"
 
       def install
         bin.install "decanter"
@@ -28,20 +28,20 @@ class Decanter < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/p5quared/decanter/releases/download/v0.5.0/decanter_Linux_x86_64.tar.gz"
-        sha256 "02cc302cf5cf614776a825c66e4f4b075abe7148ddc0c9503c241615cf1352e4"
+        url "https://github.com/p5quared/decanter/releases/download/v0.6.0/decanter_Linux_x86_64.tar.gz"
+        sha256 "bcc54f0289f600698b78039ea7bc276cdb13dfc5f7d38251e3c55f0560217595"
 
         def install
           bin.install "decanter"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/p5quared/decanter/releases/download/v0.5.0/decanter_Linux_arm64.tar.gz"
-        sha256 "2aa0a2ec23a901a2fd49045f0c2b8273e0cc8a64f258c37408eb2ff10da54b09"
+        url "https://github.com/p5quared/decanter/releases/download/v0.6.0/decanter_Linux_arm64.tar.gz"
+        sha256 "b15457d42122f0edcb57701f3ae13dacb6ed8b96b13f95390193b22b64ed950a"
 
         def install
           bin.install "decanter"
